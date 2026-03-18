@@ -21,7 +21,7 @@ public class Digitinnumber {
         int k=n%10;
         rev=rev*10+k;
         n=n/10;
-         n--;
+       
          System.out.println(rev);
     }
 
