@@ -56,17 +56,32 @@ public class Allprb {
 // }
 // System.out.println(min+max);
 // __________________________________________________________________________
-int []a={3,2,7,5};
-int min=Integer.MAX_VALUE;
-for (int i = 0; i < a.length; i++) {
-    for (int j = i; j < a.length; j++) {
-        for (int j2 = i; j2 <=j; j2++) {
-            System.out.print("["+a[j2]+"]");
-        }
-      System.out.println();
-        }
+
+// int min=Integer.MAX_VALUE;
+// for (int i = 0; i < a.length; i++) {
+//     for (int j = i; j < a.length; j++) {
+//         for (int j2 = i; j2 <=j; j2++) {
+//             System.out.print("["+a[j2]+"]");
+//         }
+//       System.out.println();
+//         }
         
+// }
+int []a={3,2,7,5,20,22,3,5,78,999};
+int k=3;
+int count=0;
+int max=Integer.MIN_VALUE;
+for (int i = 0; i <=a.length-k; i++) {
+    for (int j = i; j <k+i; j++) {
+         count+=a[j];
+    }
+if(count%2!=0){
+     System.out.println(count);
+    // max=Math.max(max, count);
 }
 
+}
+
+   
     }
 }
