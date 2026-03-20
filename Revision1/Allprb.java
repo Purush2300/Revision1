@@ -60,11 +60,13 @@ int []a={3,2,7,5};
 int min=Integer.MAX_VALUE;
 for (int i = 0; i < a.length; i++) {
     for (int j = i; j < a.length; j++) {
-        if(a[i] + a[j]<min){
-            min=Math.min(min, a[i]+a[j]);
+        for (int j2 = i; j2 <=j; j2++) {
+            System.out.print("["+a[j2]+"]");
         }
-    }
+      System.out.println();
+        }
+        
 }
-System.out.println(min);
+
     }
 }
