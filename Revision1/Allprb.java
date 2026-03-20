@@ -2,7 +2,7 @@ package Revision1;
 
 public class Allprb {
     public static void main(String[] args) {
-        int []a={1,10,55,0,-2,35};
+        // int []a={1,10,55,0,-2,35};
         // int max=Integer.MAX_VALUE;
         // for (int i = 0; i < a.length; i++) {
         //     if(a[i]<max){
@@ -27,18 +27,33 @@ public class Allprb {
     // }
     // System.out.println(index);
     // __________________________________
-    int sl=Integer.MIN_VALUE;
-    int l=a[0];
+//     int sl=Integer.MIN_VALUE;
+//     int l=Integer.MIN_VALUE;
   
-   for (int i = 1; i < a.length; i++) {
-    if(a[i]>l){
-        sl=l;
-        l=a[i];
+//  int i=0;
+//  while(i<a.length){
+//     if(a[i]>l){
+//         sl=l;
+//         l=a[i];
+//     }
+//     else if (a[i]>sl && a[i]!=l){
+//         sl=a[i];
+//     }
+//     i++;
+// }
+//     System.out.println(sl);
+// ___________________________________________________________
+int []a={3,2,7,5,1,4,10,6};
+int max=Integer.MIN_VALUE;
+int min=Integer.MAX_VALUE;
+for (int i = 0; i < a.length; i++) {
+    if(a[i]>max){
+        max=Math.max(max, a[i]);
     }
-    else if (a[i]>sl){
-        sl=a[i];
+    else if(a[i]<min){
+        min=Math.min(max, a[i]);
     }
-   }
-    System.out.println(sl);
+}
+System.out.println(min+max);
     }
 }
