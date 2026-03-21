@@ -81,20 +81,35 @@ public class Prefixall {
 // }
 // System.out.println(count);
 // ___________________________________________________________
-int []a={1,2,3,4,5,6,1};
-int k=3;
-int sum=0;
-int max=0;
-for (int i = 0; i <k; i++) {
-    sum+=a[i];
+// int []a={1,2,3,4,5,6,1};
+// int k=3;
+// int sum=0;
+// int max=0;
+// for (int i = 0; i <k; i++) {
+//     sum+=a[i];
+// }
+// max=sum;
+// int last=a.length-1;
+// for (int i = k-1; i>=0; i--) {
+//     sum=sum-a[i]+a[last];
+//     last--;
+//     max=Math.max(max, sum);
+// }
+// System.out.println(max);
+// ___________________________________________
+int []a={1,2,3,4};
+int [] pre=new int[a.length];
+pre[0]=1;
+for (int i = 1; i < pre.length; i++) {
+    pre[i]=pre[i-1]*a[i-1];
 }
-max=sum;
-int last=a.length-1;
-for (int i = k-1; i>=0; i--) {
-    sum=sum-a[i]+a[last];
-    last--;
-    max=Math.max(max, sum);
+int r=1;
+for (int i = a.length-1; i >=0; i--) {
+    pre[i]*=r;
+    r*=a[i];
 }
-System.out.println(max);
+for (int i = 0; i < pre.length; i++) {
+    System.out.println(pre[i]);
+}
     }
 }
