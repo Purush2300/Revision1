@@ -54,16 +54,31 @@ public class Prefixall {
 // }
 // System.out.println(len);
 // _______________________________________________________
-int []a={-5,1,5,0,-7};
-int altitude=0;
-int max=0;
-for (int i = 0; i < a.length; i++) {
-    altitude=altitude+a[i];
-    if(altitude>max){
-    max=altitude;
-}
-}
+// int []a={-5,1,5,0,-7};
+// int altitude=0;
+// int max=0;
+// for (int i = 0; i < a.length; i++) {
+//     altitude=altitude+a[i];
+//     if(altitude>max){
+//     max=altitude;
+// }
+// }
 
-System.out.println(max);
+// System.out.println(max);
+// _______________________________________________________________________________________
+int []a={10,5,2,6};
+int k=100;
+int left=0;
+int count=0;
+int mul=1;
+for (int right= 0; right < a.length; right++) {
+    mul*=a[right];
+    while(mul>=k){
+        mul/=a[left];
+        left++;
+    }
+    count+=(right-left+1);
+}
+System.out.println(count);
     }
 }
