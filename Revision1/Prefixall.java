@@ -36,22 +36,34 @@ public class Prefixall {
 
 
 
-int []a={1,1,1,0,0,0,1,1,1,1,0};
-int left=0;
-int len=0;
-int count=0;
-for (int right = 0; right < a.length; right++) {
-    if(a[right]==0){
-        count++;
-    }
-    while(count>2){
-        if(a[left]==0){
-            count--;
-        }
-        left++;
-    }
-    len=Math.max(len,right-left+1);
+// int []a={1,1,1,0,0,0,1,1,1,1,0};
+// int left=0;
+// int len=0;
+// int count=0;
+// for (int right = 0; right < a.length; right++) {
+//     if(a[right]==0){
+//         count++;
+//     }
+//     while(count>2){
+//         if(a[left]==0){
+//             count--;
+//         }
+//         left++;
+//     }
+//     len=Math.max(len,right-left+1);
+// }
+// System.out.println(len);
+// _______________________________________________________
+int []a={-5,1,5,0,-7};
+int altitude=0;
+int max=0;
+for (int i = 0; i < a.length; i++) {
+    altitude=altitude+a[i];
+    if(altitude>max){
+    max=altitude;
 }
-System.out.println(len);
+}
+
+System.out.println(max);
     }
 }
