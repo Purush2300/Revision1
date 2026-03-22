@@ -32,22 +32,32 @@ public class Slidingwindow {
         // }
         // System.out.println((double)maxsum/k);
         // ______________________________________________________________________________
-HashMap <Integer,Integer> map=new HashMap<>();
-int []a={1,2,1};
-int l=0;
-int len=0;
-for (int r = 0; r< a.length; r++) {
-    map.put(a[r], map.getOrDefault(a[r], 0)+1);
-    if(map.size()>2){
-       map.put(a[l],map.get(a[l])-1);
-       if(map.get(a[l])==0){
-        map.remove(a[l]);
-       }
-        l++;
-    }
+HashMap <Character,Integer> map=new HashMap<>();
+// int []a={1,2,1};
+// int l=0;
+// int len=0;
+// for (int r = 0; r< a.length; r++) {
+//     map.put(a[r], map.getOrDefault(a[r], 0)+1);
+//     if(map.size()>2){
+//        map.put(a[l],map.get(a[l])-1);
+//        if(map.get(a[l])==0){
+//         map.remove(a[l]);
+//        }
+//         l++;
+//     }
    
-    len=Math.max(len, r-l+1);
+//     len=Math.max(len, r-l+1);
+// }
+// System.out.println(len);
+
+String a="saveChangesInTheEditor";
+int count=1;
+for (int i = 0; i <a.length(); i++) {
+   
+    if(a.charAt(i)>='A' && a.charAt(i)<='Z'){
+        count++;
+    }
 }
-System.out.println(len);
+System.out.println(count);
     }
 }
