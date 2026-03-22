@@ -50,14 +50,26 @@ HashMap <Character,Integer> map=new HashMap<>();
 // }
 // System.out.println(len);
 
-String a="saveChangesInTheEditor";
-int count=1;
-for (int i = 0; i <a.length(); i++) {
+// String a="saveChangesInTheEditor";
+// int count=1;
+// for (int i = 0; i <a.length(); i++) {
    
-    if(a.charAt(i)>='A' && a.charAt(i)<='Z'){
-        count++;
+//     if(a.charAt(i)>='A' && a.charAt(i)<='Z'){
+//         count++;
+//     }
+// }
+// System.out.println(count);
+// _________________________________________________________
+String s="aaabccddd";
+String t="";
+for (int i = 0; i < s.length()-1; i++) {
+    if(s.charAt(i)==s.charAt(i+1)){
+        
+    }
+    else {
+        t=t+s.charAt(i);
     }
 }
-System.out.println(count);
+System.out.println(t);
     }
 }
