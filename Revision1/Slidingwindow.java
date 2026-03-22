@@ -1,5 +1,5 @@
 package Revision1;
-
+import java.util.HashMap;
 public class Slidingwindow {
     public static void main(String[] args) {
         // int []a={2,3,1,2,4,3};
@@ -19,17 +19,35 @@ public class Slidingwindow {
         // }
         // System.out.println(min);
         // _________________________________________________________________________
-        int []a={1,12,-5,-6,50,3};
-        int k=4;
-        int sum=0;
-        for (int i = 0; i < k; i++) {
-            sum+=a[i];
-        }
-        int maxsum=sum;
-        for (int i = k; i < a.length; i++) {
-            sum=sum-a[i-k]+a[i];
-            maxsum=Math.max(maxsum, sum);
-        }
-        System.out.println((double)maxsum/k);
+        // int []a={1,12,-5,-6,50,3};
+        // int k=4;
+        // int sum=0;
+        // for (int i = 0; i < k; i++) {
+        //     sum+=a[i];
+        // }
+        // int maxsum=sum;
+        // for (int i = k; i < a.length; i++) {
+        //     sum=sum-a[i-k]+a[i];
+        //     maxsum=Math.max(maxsum, sum);
+        // }
+        // System.out.println((double)maxsum/k);
+        // ______________________________________________________________________________
+HashMap <Integer,Integer> map=new HashMap<>();
+int []a={1,2,1};
+int l=0;
+int len=0;
+for (int r = 0; r< a.length; r++) {
+    map.put(a[r], map.getOrDefault(a[r], 0)+1);
+    if(map.size()>2){
+       map.put(a[l],map.get(a[l])-1);
+       if(map.get(a[l])==0){
+        map.remove(a[l]);
+       }
+        l++;
+    }
+   
+    len=Math.max(len, r-l+1);
+}
+System.out.println(len);
     }
 }
